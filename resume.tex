@@ -1,6 +1,6 @@
 
 \documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
-
+                            
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
@@ -8,7 +8,7 @@
 \usepackage{graphicx}                    % Enable pdflatex
 \usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
 \usepackage[margin=0.5in]{geometry}
-\textheight=700px                    % Saving trees
+    \textheight=700px                    % Saving trees ;-)
 \usepackage{url}
 
 \usepackage{tikz}
@@ -24,108 +24,101 @@
 %%% ------------------------------------------------------------
 \usepackage{sectsty}
 
-\sectionfont{%			            % Change font of \section command
-    \usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+\sectionfont{%                      % Change font of \section command
+    \usefont{OT1}{phv}{b}{n}%       % bch-b-n: CharterBT-Bold font
     \sectionrule{0pt}{0pt}{-5pt}{3pt}}
 
 %%% Macros
 %%% ------------------------------------------------------------
 \newlength{\spacebox}
-\settowidth{\spacebox}{8888888888}			% Box to align text
-\newcommand{\sepspace}{\vspace*{0.5em}}		% Vertical space macro
+\settowidth{\spacebox}{8888888888}          % Box to align text
+\newcommand{\sepspace}{\vspace*{0.5em}}     % Vertical space macro
 
 \newcommand{\MyName}[1]{ % Name
-    \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
-    \par \normalsize \normalfont}
-
+        \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+        \par \normalsize \normalfont}
+        
 \newcommand{\MySlogan}[1]{ % Slogan (optional)
-    \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
-    \par \normalsize \normalfont}
-
-
+        \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+        \par \normalsize \normalfont}
+        
+        
 \newcommand{\NameEmailPhoneSiteGithub}[5]{
-    \Huge \usefont{OT1}{phv}{m}{n} \textbf{#1}
-    \large \usefont{OT1}{phv}{m}{n} \hfill #2\hspace{25pt}#3
-
-    \textit{Curriculum Vitae}\hfill \textit{website } #4 \hspace{25pt}\textit{github } #5
-    \par \normalsize \normalfont
+        \Huge \usefont{OT1}{phv}{m}{n} \textbf{#1} 
+        \large \usefont{OT1}{phv}{m}{n} \hfill #2\hspace{25pt}#3
+        
+        \textit{Curriculum Vitae}\hfill \textit{website } #4 \hspace{25pt}\textit{github } #5 
+        \par \normalsize \normalfont
 }
 
 \newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
 
 \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
-    \noindent\hangindent=2em\hangafter=0 % Indentation
-    \parbox{\spacebox}{        % Box to align text
-        \textit{#1}}			   % Entry name (birth, address, etc.)
-    \hspace{1.5em} #2 \par}    % Entry value	
-
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value    
+        
 
 
 %%% Begin Document
 %%% ------------------------------------------------------------
 \begin{document}
 
-    \NameEmailPhoneSiteGithub{Cláudio Bessa}{               }{claudioafbessa@gmail.com}
-    {\href{https://www.youtube.com/channel/UCKz1tkzbzC6SV9CYF7qRE3g}{bessa_}}
-    {\href{https://github.com/assebc}{assebc}}
+\NameEmailPhoneSiteGithub{Cláudio Bessa}{               }{claudioafbessa@gmail.com}
+{\href{https://www.youtube.com/channel/UCYXW07u06W_eyY_GMJcQDaw}{bessa_}}
+{\href{https://github.com/assebc}{assebc}}
 
-    \sepspace
+\sepspace
 
-    \NewPart{Education}{}
-    \begin{itemize}
-        \item[] \textbf{University:} Currently getting a degree in \textit{University of Minho} of \textit{Software Engineering}
-        \item[] \textbf{High-school:} Finished High School in \textit{Escola Secundária das Caldas das Taipas}
-    \end{itemize}
+\NewPart{Education}{}
+\begin{itemize}
+    \item[] \textbf{University:} Currently getting a degree in \textit{University of Minho} of \textit{Software Engineering} 
+    \item[] \textbf{High-school:} Finished High School in \textit{Escola Secundária das Caldas das Taipas} 
+\end{itemize}
 
-    \sepspace
+\sepspace
 
 %%% Work experience
 %%% ------------------------------------------------------------
-    \NewPart{Work Experience}{}
+\NewPart{Work Experience}{}
 
-    \begin{itemize}
-        \item[] 2019 Made a full working website in HTML for a project in High School
-        \item[] 2021 University projects where re-created \textit{Pacman}, and created a calculator using stack
-        \item[] 2022 University projects where I managed huge amount of data using data structures
-    \end{itemize}
+\begin{itemize}
+    \item[] 2019 Made a full working website in HTML for a project in High School 
+    \item[] 2020 Oct-Jan University project Recreation of \textit{Pacman} in Haskell
+    \item[] 2021 Feb-Jun University project Calculator using Stack methods in C
+    \item[] 2021 Oct-Jan University project \textit{Github's} pretyped Data Management in C
+    \item[] 2022 Jun-Aug Summer Intern at Sentinel, worked with C++ and Qt
+\end{itemize}
 
-    \sepspace
-
+\sepspace
+ 
 %%% Software Skills
 %%% ------------------------------------------------------------
-    \NewPart{Software Skills}{}
+\NewPart{Software Skills}{}
 
-    \SkillsEntry{Java}{My favorite language, and working towards being my best one as well}
-    \SkillsEntry{C}{Most used language and consequently the one I'm more fluent in}
-    \SkillsEntry{Haskell}{Took 2 classes in my first semester, being my first language to be deepened}
-    \SkillsEntry{Python}{My first programming language, that I made some basic projects on}
-    \SkillsEntry{Assembly}{Learned when having \textit{Computer Science} class}
+\SkillsEntry{Java}{My favorite language, and one of my best languages for software development}
+\SkillsEntry{C}{Most used language and consequently the one I'm more fluent in}
+\SkillsEntry{C++}{One of the most used languages}
+\SkillsEntry{Qt}{Learned as a Summer Intern}
+\SkillsEntry{MySQL}{Learned when having \textit{Data Base} class}
+\SkillsEntry{HTML}{Created some small websites for specific brands and small projects}
+\SkillsEntry{CSS}{Created some small websites for specific brands and small projects}
+\SkillsEntry{Haskell}{Took 2 classes in my first semester, being my first language to be deepened}
+\SkillsEntry{Assembly}{Learned when having \textit{Computer Science} class}
+\SkillsEntry{Python}{My first programming language, that I made some basic projects on}
+
 
 %%% Achievements
 %%% -----------------------------------------------------------
 
-    \NewPart{Life Achievements}{}
+\NewPart{Life Achievements}{}
 
-    \begin{itemize}
-        \item[] 2012 Honored by \textit{Sociedade Martins Sarmento}
-        \item[] 2020 Finished High School with a classification of 181/200
-        \item[] 2020 Admitted at University with a classification of 178/200
-        \item[] 2021 Won CNU's(University National Championship) in Volleyball
-    \end{itemize}
-
-%%% Hobbies
-%%% -----------------------------------------------------------
-
-    \NewPart{Hobbies}{}
-
-    \begin{itemize}
-        \item[] Volleyball
-        \item[] Developing Software
-        \item[] Digital Editor
-        \item[] Cars
-        \item[] Gaming
-        \item[] Cooking
-    \end{itemize}
-
+\begin{itemize}
+    \item[] 2012 Honored by \textit{Sociedade Martins Sarmento} 
+    \item[] 2020 Finished High School with a classification of 181/200 
+    \item[] 2020 Admitted at University with a classification of 178/200
+    \item[] 2021 Won CNU's(University National Championship) in Volleyball
+\end{itemize}
 
 \end{document}
